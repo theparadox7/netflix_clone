@@ -1,12 +1,10 @@
-/* Body Styling */
+
 body {
     background-color: black;
     margin: 0;
     color: white;
-    /* Removed background-image as cross-fade is not a valid property for body */
 }
 
-/* Default Page Centering */
 .default_page_centre {
     color: white;
     display: flex;
@@ -18,10 +16,9 @@ body {
     text-align: center;
 }
 
-/* Header Styling */
 .header {
     display: flex;
-    justify-content: space-between; /* Space between logo and right section */
+    justify-content: space-between; 
     align-items: center;
     padding: 1rem 2rem;
     background-color: black;
@@ -31,19 +28,19 @@ body {
     z-index: 1000;
 }
 
-/* Logo Styling */
+
 .logo img {
     height: 50px;
 }
 
-/* Navigation Styling (for dropdown and sign-in button) */
+
 .nav {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-/* Language Dropdown */
+
 .language-dropdown select {
     background-color: black;
     color: white;
@@ -54,27 +51,33 @@ body {
     cursor: pointer;
 }
 
+
 .language-dropdown select:focus {
     outline: none;
-    border-color: red; /* Netflix red focus effect */
+    border-color: red;
+}
+
+.language-dropdown select:hover{
+    border-color: red;
 }
 
 /* Sign In Button */
 .signin {
     background-color: transparent;
     color: white;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: red;
 }
 
 .signin:hover {
-    background-color: red;
+    background-color: rgba(241, 14, 14, 0.808);
     color: white;
-    border-color: red;
+    /* border-color: white; */
 }
 
 /* Text Elements Styling */
@@ -99,4 +102,36 @@ h1, h2, h3 {
     .logo img {
         height: 40px; /* Reduce logo size on smaller screens */
     }
+}
+
+
+
+
+
+.language-dropdown select {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hover Effect for Dropdown */
+.language-dropdown select:hover {
+    border-color: red; /* Border turns red on hover */
+}
+
+/* Styling the Options in the Dropdown */
+.language-dropdown select option {
+    color: white; /* Text color stays black */
+    background-color: black; /* Background stays white for options */
+}
+
+/* Hover Effect for Options */
+.language-dropdown select option:hover {
+    background-color: white; /* Option background remains white */
+    color: black; /* Text remains black */
+    border-color: red; /* Optional: This won't apply directly to options, since border is on select element */
 }
