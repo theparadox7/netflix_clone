@@ -1,14 +1,20 @@
+
+
+
 body {
     background-color: black;
     margin: 0;
     color: white;
-    background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 65%), /* Black to transparent fade */
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%),
         url('/images/1_5lyavS59mazOFnb55Z6znQ.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: 100% 100%; /* Ensures the image stretches to fit both width and height */
+    height: 100vh;
+    background-position: center; /* Centers the image */
+    background-attachment: scroll; /* Ensures the image scrolls with the page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
+
 
 .default_page_centre {
     color: white;
@@ -19,30 +25,35 @@ body {
     height: 75vh;
     margin: 0;
     text-align: center;
+    margin-bottom: 5%;
+
 }
 
 .header {
     display: flex;
-    justify-content: space-between;  /* Distribute the content (logo on the left, nav on the right) */
+    justify-content: space-between;
+    /* Distribute the content (logo on the left, nav on the right) */
     align-items: center;
     padding: 1rem 2rem;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 1000;
 }
 
 .logo img {
     height: 50px;
-    margin-right: 2rem;  /* Add space between logo and nav items */
+    margin-right: 2rem;
+    /* Add space between logo and nav items */
 }
 
 .nav {
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: flex-start;  /* Align the nav items to the left */
+    justify-content: flex-start;
+    /* Align the nav items to the left */
 }
 
 .language-dropdown select {
@@ -93,7 +104,9 @@ body {
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 1rem 0;
 }
 
@@ -107,16 +120,19 @@ h1, h2, h3 {
     .bigger_text {
         font-size: 2rem;
     }
-    h2, h3 {
+
+    h2,
+    h3 {
         font-size: 1.2rem;
     }
+
     .logo img {
-        height: 40px; 
+        height: 40px;
     }
 }
 
 
-.main_and_started button{
+.main_and_started button {
     background-color: transparent;
     color: white;
     padding: 0.5rem 2rem;
@@ -131,16 +147,21 @@ h1, h2, h3 {
     font-size: 1em;
 }
 
-.main_and_started button:hover{
+.main_and_started button:hover {
     background-color: rgba(241, 14, 14, 0.808);
     transition: all 1.0s ease;
 }
 
-.main_and_started input{
+.main_and_started input {
     background-color: transparent;
     border-color: white;
     border-width: 0.1ch;
     width: 25em;
     height: 3em;
     font-size: 1em;
+}
+
+.below_content {
+    margin-left: 15%;
+    margin-right: 15%;
 }
